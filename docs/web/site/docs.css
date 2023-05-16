@@ -3,7 +3,25 @@
 
    Copyright 2021 Anton Bachin */
 
-
+/* Colors. */
+:root {
+  --bg-color: #131618;
+  --text-color: #c9d1d9;
+  --odoc-bg: #1a1f26;
+  --odoc-code-bg: #2c333b;
+  --black: #111;
+  --dark-gray: #282828;
+  --gray: #666;
+  --target-backing-color: #390022;
+  --href-after: #5d7fcd;
+  --href-active: #8dc5ff;
+  --keyword: #ff6c9b;
+  --type: #70df5c;
+  --tag: #c28eff;
+  --string: #e3db7a;
+  --of: #bec5cd;
+  --anchor: #bfcdea;
+}
 
 /* Fonts. */
 
@@ -101,15 +119,15 @@ h6 {
 /* Colors and presentation styles. */
 
 body {
-  background-color: #131618;
-  color: #c9d1d9;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .odoc-content pre {
-  background-color: #1a1f26;
+  background-color: var(--odoc-bg);
   margin-left: 1em;
   margin-right: 1em;
-  border: 1px solid #111;
+  border: 1px solid var(--black);
 }
 .odoc-content .spec > pre {
   background: none;
@@ -119,7 +137,7 @@ body {
 
 .odoc-content code {
   /* color: #ddd; */
-  background-color: #2c333b;
+  background-color: var(--odoc-code-bg);
   padding: 0 5px;
   margin: 0 1px;
   white-space: nowrap;
@@ -150,17 +168,17 @@ body {
 } */
 
 header {
-  background-color: #131618;
-  border-bottom: 1px solid #282828;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--dark-gray);
 }
 
 header .topmost {
   /* background-color: #0f131a; */
-  border-bottom: 1px solid #282828;
+  border-bottom: 1px solid var(--dark-gray);
 }
 
 h1 {
-  text-shadow: -2px 2px black;
+  text-shadow: -2px 2px var(--black);
 }
 
 header pre {
@@ -187,11 +205,11 @@ header p .title {
 }
 
 footer {
-  color: #666;
+  color: var(--gray);
 }
 
 :target .backing {
-  background-color: #390022;
+  background-color: var(--target-backing-color);
 }
 
 nav ~ * a[href="#builtin"],
@@ -214,7 +232,7 @@ a[href^=http]::after {
   font-family: FontAwesome;
   font-size: 10px;
   line-height: 18px;
-  color: #5d7fcd;
+  color: var(--href-after);
   position: relative;
   top: -1px;
   margin-left: 2px;
@@ -225,7 +243,7 @@ a[href^=http]::after {
 }
 
 a, a:visited, a:active {
-  color: #8dc5ff;
+  color: var(--href-active);
   text-decoration: none;
 }
 
@@ -234,27 +252,27 @@ a:hover {
 }
 
 .odoc-content a > code {
-  color: #8dc5ff;
+  color: var(--href-active);
 }
 
 .hljs-module-access, .hljs-keyword, .keyword {
-  color: #ff6c9b;
+  color: var(--keyword);
 }
 
 .hljs-identifier, .hljs-literal, .hljs-type {
-  color: #70df5c;
+  color: var(--type);
 }
 
 .hljs-tag {
-  color: #c28eff;
+  color: var(--tag);
 }
 
 .hljs-string {
-  color: #e3db7a;
+  color: var(--string);
 }
 
 .of {
-  color: #bec5cd;
+  color: var(--of);
 }
 
 .topmost ul {
@@ -407,7 +425,7 @@ ul ul li {
     height: 100%;
     width: 43rem;
     /* background-color: #262626; */
-    border-right: 1px solid #282828;
+    border-right: 1px solid var(--dark-gray);
   }
 
   h2, h2 ~ :not(.odoc-spec):not(nav), footer {
@@ -582,8 +600,8 @@ h2:first-of-type {
     overflow-y: scroll;
     scrollbar-width: none;
     line-height: 30px;
-    border-right: 1px solid #262626;
-    background-color: #131618;
+    border-right: 1px solid var(--dark-gray);
+    background-color: var(--bg-color);
     /* color: #ddd; */
   }
   .odoc-toc::-webkit-scrollbar {
@@ -674,7 +692,7 @@ h2 > .anchor, h3 > .anchor {
   font-family: FontAwesome;
   font-size: 10px;
   font-style: oblique;
-  color: #bfcdea;
+  color: var(--anchor);
   position: relative;
   top: -1.75px;
   left: -4px;
